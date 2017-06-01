@@ -111,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -125,6 +126,38 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Add-Male-User-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ef003298a8eeb796f89433511afde0d6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ef003298a8eeb796f89433511afde0d61.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f2788e92256b4f7f6836bf453f9e7b9b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f2788e92256b4f7f6836bf453f9e7b9b1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\98794163_200x200_pad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_1456495NaJeNA1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_1456495NaJeNA1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_15046ZmqlEysw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_152363IzYmrQG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\oie_15618LhGu42wC.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
