@@ -53,8 +53,8 @@ namespace CA_Client
                 {
                     connect.UserID = Int32.Parse(str);
                     this.Close();
-                    Client frmClient = new Client(connect);
-                    frmClient.Show();
+                    frmCAmanager frmManager = new frmCAmanager(connect);
+                    frmManager.Show();
                 }
 
             }
