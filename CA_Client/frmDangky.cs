@@ -44,5 +44,10 @@ namespace CA_Client
             else
                 MessageBox.Show("Đăng ký thất bại");
         }
+
+        private void frmDangky_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
