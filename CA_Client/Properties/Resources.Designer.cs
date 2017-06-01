@@ -63,6 +63,16 @@ namespace CA_Client.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _51_VBd0YqNL__AC_UL115_ {
+            get {
+                object obj = ResourceManager.GetObject("51+VBd0YqNL._AC_UL115_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _98794163_200x200_pad {
             get {
                 object obj = ResourceManager.GetObject("98794163_200x200_pad", resourceCulture);
@@ -76,6 +86,36 @@ namespace CA_Client.Properties {
         internal static System.Drawing.Bitmap Add_Male_User_icon {
             get {
                 object obj = ResourceManager.GetObject("Add-Male-User-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap batman_chibi_by_thecinnamonkoala_d4y8wx2 {
+            get {
+                object obj = ResourceManager.GetObject("batman_chibi_by_thecinnamonkoala-d4y8wx2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap batman_chibi_by_thecinnamonkoala_d4y8wx21 {
+            get {
+                object obj = ResourceManager.GetObject("batman_chibi_by_thecinnamonkoala-d4y8wx21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap d464daf0_baec_40d3_ba68_0d16b18fceca {
+            get {
+                object obj = ResourceManager.GetObject("d464daf0-baec-40d3-ba68-0d16b18fceca", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +206,16 @@ namespace CA_Client.Properties {
         internal static System.Drawing.Bitmap oie_15618LhGu42wC {
             get {
                 object obj = ResourceManager.GetObject("oie_15618LhGu42wC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rsz_3images__1_ {
+            get {
+                object obj = ResourceManager.GetObject("rsz_3images (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
