@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.côngCụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCapmoi = new System.Windows.Forms.ToolStripMenuItem();
@@ -51,17 +52,20 @@
             this.SignatureCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtinCA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.Font = new System.Drawing.Font("Cooper Std Black", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.côngCụToolStripMenuItem,
             this.giớiThiệuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(529, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(594, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,31 +75,40 @@
             this.menuCapmoi,
             this.menuTimkiem});
             this.côngCụToolStripMenuItem.Name = "côngCụToolStripMenuItem";
-            this.côngCụToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.côngCụToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.côngCụToolStripMenuItem.Text = "Yêu cầu";
             // 
             // menuCapmoi
             // 
             this.menuCapmoi.Name = "menuCapmoi";
-            this.menuCapmoi.Size = new System.Drawing.Size(181, 26);
+            this.menuCapmoi.Size = new System.Drawing.Size(152, 22);
             this.menuCapmoi.Text = "Cấp mới";
             this.menuCapmoi.Click += new System.EventHandler(this.menuCapmoi_Click);
             // 
             // menuTimkiem
             // 
             this.menuTimkiem.Name = "menuTimkiem";
-            this.menuTimkiem.Size = new System.Drawing.Size(181, 26);
+            this.menuTimkiem.Size = new System.Drawing.Size(152, 22);
             this.menuTimkiem.Text = "Tìm kiếm";
             this.menuTimkiem.Click += new System.EventHandler(this.menuTimkiem_Click);
             // 
             // giớiThiệuToolStripMenuItem
             // 
             this.giớiThiệuToolStripMenuItem.Name = "giớiThiệuToolStripMenuItem";
-            this.giớiThiệuToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
+            this.giớiThiệuToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.giớiThiệuToolStripMenuItem.Text = "Giới thiệu";
             // 
             // dgvThongtinCA
             // 
+            this.dgvThongtinCA.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cooper Std Black", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvThongtinCA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvThongtinCA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongtinCA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SerialNumber,
@@ -112,16 +125,18 @@
             this.dgvThongtinCA.Location = new System.Drawing.Point(12, 108);
             this.dgvThongtinCA.Name = "dgvThongtinCA";
             this.dgvThongtinCA.RowTemplate.Height = 24;
-            this.dgvThongtinCA.Size = new System.Drawing.Size(505, 287);
+            this.dgvThongtinCA.Size = new System.Drawing.Size(594, 265);
             this.dgvThongtinCA.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 39);
+            this.label1.Font = new System.Drawing.Font("Cooper Std Black", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(125, 45);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(508, 55);
+            this.label1.Size = new System.Drawing.Size(458, 47);
             this.label1.TabIndex = 2;
             this.label1.Text = "FinalC-L CA Manager";
             // 
@@ -212,7 +227,7 @@
             // 
             // frmCAmanager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(529, 438);
             this.Controls.Add(this.btnThuHoi);
@@ -222,6 +237,7 @@
             this.Controls.Add(this.dgvThongtinCA);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmCAmanager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CA Manager";
@@ -229,6 +245,7 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtinCA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -169,5 +169,20 @@
   <ItemGroup>
     <None Include="Resources\oie_15618LhGu42wC.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\51+VBd0YqNL._AC_UL115_.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batman_chibi_by_thecinnamonkoala-d4y8wx2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batman_chibi_by_thecinnamonkoala-d4y8wx21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d464daf0-baec-40d3-ba68-0d16b18fceca.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_3images %281%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
