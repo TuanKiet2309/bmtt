@@ -28,17 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.côngCụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCapmoi = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTimkiem = new System.Windows.Forms.ToolStripMenuItem();
             this.giớiThiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvThongtinCA = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnXem = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
-            this.btnThuHoi = new System.Windows.Forms.Button();
             this.SerialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Version = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SignatureAlgorithm = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,22 +46,25 @@
             this.PublicKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Extensions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SignatureCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnXem = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.btnThuHoi = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtinCA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Cooper Std Black", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.menuStrip1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.côngCụToolStripMenuItem,
             this.giớiThiệuToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(594, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(705, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -75,40 +74,41 @@
             this.menuCapmoi,
             this.menuTimkiem});
             this.côngCụToolStripMenuItem.Name = "côngCụToolStripMenuItem";
-            this.côngCụToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
+            this.côngCụToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
             this.côngCụToolStripMenuItem.Text = "Yêu cầu";
             // 
             // menuCapmoi
             // 
             this.menuCapmoi.Name = "menuCapmoi";
-            this.menuCapmoi.Size = new System.Drawing.Size(152, 22);
+            this.menuCapmoi.Size = new System.Drawing.Size(181, 26);
             this.menuCapmoi.Text = "Cấp mới";
             this.menuCapmoi.Click += new System.EventHandler(this.menuCapmoi_Click);
             // 
             // menuTimkiem
             // 
             this.menuTimkiem.Name = "menuTimkiem";
-            this.menuTimkiem.Size = new System.Drawing.Size(152, 22);
+            this.menuTimkiem.Size = new System.Drawing.Size(181, 26);
             this.menuTimkiem.Text = "Tìm kiếm";
             this.menuTimkiem.Click += new System.EventHandler(this.menuTimkiem_Click);
             // 
             // giớiThiệuToolStripMenuItem
             // 
             this.giớiThiệuToolStripMenuItem.Name = "giớiThiệuToolStripMenuItem";
-            this.giớiThiệuToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
+            this.giớiThiệuToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.giớiThiệuToolStripMenuItem.Text = "Giới thiệu";
+            this.giớiThiệuToolStripMenuItem.Click += new System.EventHandler(this.giớiThiệuToolStripMenuItem_Click);
             // 
             // dgvThongtinCA
             // 
             this.dgvThongtinCA.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Cooper Std Black", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvThongtinCA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvThongtinCA.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvThongtinCA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvThongtinCA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SerialNumber,
@@ -122,53 +122,12 @@
             this.PublicKey,
             this.Extensions,
             this.SignatureCA});
-            this.dgvThongtinCA.Location = new System.Drawing.Point(12, 108);
+            this.dgvThongtinCA.Location = new System.Drawing.Point(16, 133);
+            this.dgvThongtinCA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvThongtinCA.Name = "dgvThongtinCA";
             this.dgvThongtinCA.RowTemplate.Height = 24;
-            this.dgvThongtinCA.Size = new System.Drawing.Size(594, 265);
+            this.dgvThongtinCA.Size = new System.Drawing.Size(676, 266);
             this.dgvThongtinCA.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Cooper Std Black", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(125, 45);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(458, 47);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "FinalC-L CA Manager";
-            // 
-            // btnXem
-            // 
-            this.btnXem.Location = new System.Drawing.Point(445, 403);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(75, 23);
-            this.btnXem.TabIndex = 3;
-            this.btnXem.Text = "Xem";
-            this.btnXem.UseVisualStyleBackColor = true;
-            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(364, 403);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 23);
-            this.btnLuu.TabIndex = 4;
-            this.btnLuu.Text = "Lưu file";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // btnThuHoi
-            // 
-            this.btnThuHoi.Location = new System.Drawing.Point(283, 403);
-            this.btnThuHoi.Name = "btnThuHoi";
-            this.btnThuHoi.Size = new System.Drawing.Size(75, 23);
-            this.btnThuHoi.TabIndex = 5;
-            this.btnThuHoi.Text = "Thu hồi";
-            this.btnThuHoi.UseVisualStyleBackColor = true;
-            this.btnThuHoi.Click += new System.EventHandler(this.btnThuHoi_Click);
             // 
             // SerialNumber
             // 
@@ -225,11 +184,55 @@
             this.SignatureCA.HeaderText = "SignatureCA";
             this.SignatureCA.Name = "SignatureCA";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 29.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(167, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(516, 57);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "FinalC-L CA Manager";
+            // 
+            // btnXem
+            // 
+            this.btnXem.Location = new System.Drawing.Point(592, 407);
+            this.btnXem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(100, 28);
+            this.btnXem.TabIndex = 3;
+            this.btnXem.Text = "Xem";
+            this.btnXem.UseVisualStyleBackColor = true;
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(484, 407);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(100, 28);
+            this.btnLuu.TabIndex = 4;
+            this.btnLuu.Text = "Lưu file";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // btnThuHoi
+            // 
+            this.btnThuHoi.Location = new System.Drawing.Point(376, 407);
+            this.btnThuHoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThuHoi.Name = "btnThuHoi";
+            this.btnThuHoi.Size = new System.Drawing.Size(100, 28);
+            this.btnThuHoi.TabIndex = 5;
+            this.btnThuHoi.Text = "Thu hồi";
+            this.btnThuHoi.UseVisualStyleBackColor = true;
+            this.btnThuHoi.Click += new System.EventHandler(this.btnThuHoi_Click);
+            // 
             // frmCAmanager
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 438);
+            this.ClientSize = new System.Drawing.Size(705, 446);
             this.Controls.Add(this.btnThuHoi);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXem);
@@ -237,7 +240,7 @@
             this.Controls.Add(this.dgvThongtinCA);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmCAmanager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CA Manager";
@@ -245,7 +248,6 @@
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtinCA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

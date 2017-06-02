@@ -11,7 +11,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 namespace CA_Client
 {
     public partial class frmDangky : Form
@@ -46,6 +46,22 @@ namespace CA_Client
         }
 
         private void frmDangky_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+                MessageBox.Show("Input number only!!", "Thông Báo ");
+            }
+            txtPhone.MaxLength = 11;
+            
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
         {
 
         }

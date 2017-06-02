@@ -125,5 +125,11 @@ namespace CA_Client
             }
             this.frmCAmanager_Load(sender, e);
         }
+
+        private void giớiThiệuToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAbout frmAbout = new frmAbout();
+            frmAbout.Show();
+        }
     }
 }
