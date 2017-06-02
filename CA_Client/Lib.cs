@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CA_Client.VO;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -191,7 +192,7 @@ namespace Libs
                 else
                     MessageBox.Show("Public Key không hợp lệ!");
             }
-            return BitConverter.ToString(encryptedData).Replace("-", " ");
+            return BitConverter.ToString(encryptedData).Replace("-", ":");
         }
 
         public static string Decrypt(string ciphertext, string public_privateKeyXml)
@@ -217,6 +218,63 @@ namespace Libs
             publicKey = rsa.ToXmlString(false);
             privateKey = rsa.ToXmlString(true);
         }
-
+        public static string ca2string(CaVO ca)
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.Append("Certificate:\n");
+            builder.Append("    Data:\n");
+            builder.Append("        Version: ");
+            builder.Append(ca.Version1);
+            builder.Append('\n');
+            builder.Append("        Serial Number: ");
+            builder.Append(ca.SerialNumber1);
+            builder.Append('\n');
+            builder.Append("        Signature Algorithm: ");
+            builder.Append(ca.SignatureAlgorithm1);
+            builder.Append('\n');
+            builder.Append("        Issuer Name: ");
+            builder.Append(ca.IssuerName1);
+            builder.Append('\n');
+            builder.Append("        Validity:\n");
+            builder.Append("            Not before:");
+            builder.Append(ca.ValidityPeriod_before1);
+            builder.Append('\n');
+            builder.Append("            Not after :");
+            builder.Append(ca.ValidityPeriod_after1);
+            builder.Append('\n');
+            builder.Append("        Subject: ");
+            builder.Append(ca.SubjectName1);
+            builder.Append('\n');
+            builder.Append("        PublicKey: ");
+            builder.Append(ca.PublicKey1);
+            builder.Append('\n');
+            builder.Append("        Extensions: ");
+            builder.Append(ca.Extensions1);
+            builder.Append('\n');
+            builder.Append("    Signature Algorithm: ");
+            builder.Append(ca.SignatureAlgorithm1);
+            builder.Append('\n');
+            builder.Append(ca.SignatureCA1);
+            return builder.ToString();
+        }
+        public static string SaveFile(string initialDirectory, string filter)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = filter;
+            dialog.InitialDirectory = initialDirectory;
+            dialog.Title = "Save file";
+            return (dialog.ShowDialog() == DialogResult.OK)
+               ? dialog.FileName : null;
+        }
+        public static string SelectFile(string initialDirectory, string filter)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = filter;
+            
+            dialog.InitialDirectory = initialDirectory;
+            dialog.Title = "Select a file";
+            return (dialog.ShowDialog() == DialogResult.OK)
+               ? dialog.FileName : null;
+        }
     }
 }

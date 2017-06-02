@@ -1,6 +1,6 @@
 ﻿namespace CA_Client
 {
-    partial class frmCAmanager
+    partial class frmTimKiem
     {
         /// <summary>
         /// Required designer variable.
@@ -28,16 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.côngCụToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuCapmoi = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuTimkiem = new System.Windows.Forms.ToolStripMenuItem();
-            this.giớiThiệuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvThongtinCA = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnXem = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
-            this.btnThuHoi = new System.Windows.Forms.Button();
+            this.btnXem = new System.Windows.Forms.Button();
+            this.lbl = new System.Windows.Forms.Label();
+            this.txtTimkiem = new System.Windows.Forms.TextBox();
+            this.btnTimkiem = new System.Windows.Forms.Button();
             this.SerialNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Version = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SignatureAlgorithm = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,50 +45,8 @@
             this.PublicKey = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Extensions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SignatureCA = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtinCA)).BeginInit();
             this.SuspendLayout();
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.côngCụToolStripMenuItem,
-            this.giớiThiệuToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(529, 28);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // côngCụToolStripMenuItem
-            // 
-            this.côngCụToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuCapmoi,
-            this.menuTimkiem});
-            this.côngCụToolStripMenuItem.Name = "côngCụToolStripMenuItem";
-            this.côngCụToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
-            this.côngCụToolStripMenuItem.Text = "Yêu cầu";
-            // 
-            // menuCapmoi
-            // 
-            this.menuCapmoi.Name = "menuCapmoi";
-            this.menuCapmoi.Size = new System.Drawing.Size(181, 26);
-            this.menuCapmoi.Text = "Cấp mới";
-            this.menuCapmoi.Click += new System.EventHandler(this.menuCapmoi_Click);
-            // 
-            // menuTimkiem
-            // 
-            this.menuTimkiem.Name = "menuTimkiem";
-            this.menuTimkiem.Size = new System.Drawing.Size(181, 26);
-            this.menuTimkiem.Text = "Tìm kiếm";
-            this.menuTimkiem.Click += new System.EventHandler(this.menuTimkiem_Click);
-            // 
-            // giớiThiệuToolStripMenuItem
-            // 
-            this.giớiThiệuToolStripMenuItem.Name = "giớiThiệuToolStripMenuItem";
-            this.giớiThiệuToolStripMenuItem.Size = new System.Drawing.Size(85, 24);
-            this.giớiThiệuToolStripMenuItem.Text = "Giới thiệu";
             // 
             // dgvThongtinCA
             // 
@@ -109,51 +63,57 @@
             this.PublicKey,
             this.Extensions,
             this.SignatureCA});
-            this.dgvThongtinCA.Location = new System.Drawing.Point(12, 108);
+            this.dgvThongtinCA.Location = new System.Drawing.Point(12, 38);
             this.dgvThongtinCA.Name = "dgvThongtinCA";
             this.dgvThongtinCA.RowTemplate.Height = 24;
-            this.dgvThongtinCA.Size = new System.Drawing.Size(505, 287);
-            this.dgvThongtinCA.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(508, 55);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "FinalC-L CA Manager";
-            // 
-            // btnXem
-            // 
-            this.btnXem.Location = new System.Drawing.Point(445, 403);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(75, 23);
-            this.btnXem.TabIndex = 3;
-            this.btnXem.Text = "Xem";
-            this.btnXem.UseVisualStyleBackColor = true;
-            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            this.dgvThongtinCA.Size = new System.Drawing.Size(586, 233);
+            this.dgvThongtinCA.TabIndex = 2;
             // 
             // btnLuu
             // 
-            this.btnLuu.Location = new System.Drawing.Point(364, 403);
+            this.btnLuu.Location = new System.Drawing.Point(442, 277);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(75, 23);
-            this.btnLuu.TabIndex = 4;
+            this.btnLuu.TabIndex = 6;
             this.btnLuu.Text = "Lưu file";
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // btnThuHoi
+            // btnXem
             // 
-            this.btnThuHoi.Location = new System.Drawing.Point(283, 403);
-            this.btnThuHoi.Name = "btnThuHoi";
-            this.btnThuHoi.Size = new System.Drawing.Size(75, 23);
-            this.btnThuHoi.TabIndex = 5;
-            this.btnThuHoi.Text = "Thu hồi";
-            this.btnThuHoi.UseVisualStyleBackColor = true;
-            this.btnThuHoi.Click += new System.EventHandler(this.btnThuHoi_Click);
+            this.btnXem.Location = new System.Drawing.Point(523, 277);
+            this.btnXem.Name = "btnXem";
+            this.btnXem.Size = new System.Drawing.Size(75, 23);
+            this.btnXem.TabIndex = 5;
+            this.btnXem.Text = "Xem";
+            this.btnXem.UseVisualStyleBackColor = true;
+            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            // 
+            // lbl
+            // 
+            this.lbl.AutoSize = true;
+            this.lbl.Location = new System.Drawing.Point(12, 9);
+            this.lbl.Name = "lbl";
+            this.lbl.Size = new System.Drawing.Size(96, 17);
+            this.lbl.TabIndex = 7;
+            this.lbl.Text = "Serial number";
+            // 
+            // txtTimkiem
+            // 
+            this.txtTimkiem.Location = new System.Drawing.Point(115, 9);
+            this.txtTimkiem.Name = "txtTimkiem";
+            this.txtTimkiem.Size = new System.Drawing.Size(402, 22);
+            this.txtTimkiem.TabIndex = 8;
+            // 
+            // btnTimkiem
+            // 
+            this.btnTimkiem.Location = new System.Drawing.Point(523, 9);
+            this.btnTimkiem.Name = "btnTimkiem";
+            this.btnTimkiem.Size = new System.Drawing.Size(75, 23);
+            this.btnTimkiem.TabIndex = 9;
+            this.btnTimkiem.Text = "Tìm";
+            this.btnTimkiem.UseVisualStyleBackColor = true;
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
             // SerialNumber
             // 
@@ -210,24 +170,19 @@
             this.SignatureCA.HeaderText = "SignatureCA";
             this.SignatureCA.Name = "SignatureCA";
             // 
-            // frmCAmanager
+            // frmTimKiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(529, 438);
-            this.Controls.Add(this.btnThuHoi);
+            this.ClientSize = new System.Drawing.Size(610, 307);
+            this.Controls.Add(this.btnTimkiem);
+            this.Controls.Add(this.txtTimkiem);
+            this.Controls.Add(this.lbl);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.btnXem);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvThongtinCA);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
-            this.Name = "frmCAmanager";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CA Manager";
-            this.Load += new System.EventHandler(this.frmCAmanager_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Name = "frmTimKiem";
+            this.Text = "Tìm Kiếm";
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtinCA)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -236,16 +191,12 @@
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem côngCụToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem menuCapmoi;
-        private System.Windows.Forms.ToolStripMenuItem menuTimkiem;
-        private System.Windows.Forms.ToolStripMenuItem giớiThiệuToolStripMenuItem;
         private System.Windows.Forms.DataGridView dgvThongtinCA;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnXem;
         private System.Windows.Forms.Button btnLuu;
-        private System.Windows.Forms.Button btnThuHoi;
+        private System.Windows.Forms.Button btnXem;
+        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.TextBox txtTimkiem;
+        private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn SerialNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn Version;
         private System.Windows.Forms.DataGridViewTextBoxColumn SignatureAlgorithm;

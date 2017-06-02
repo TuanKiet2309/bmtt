@@ -70,6 +70,7 @@ namespace CA_Client
             catch (Exception e2)
             {
                 MessageBox.Show("Không thể kết nối tới Server! Hãy kiểm tra lại Server");
+                connectSetup();
             }
         }
         public static bool ValidateServerCertificate(

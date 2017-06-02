@@ -23,23 +23,39 @@ namespace CA_Client
         string publickey;
         string privatekey;
         Connect connect;
-        public frmCapmoi(Connect frm)
+        frmCAmanager caMana;
+        public frmCapmoi(Connect frm, frmCAmanager frm2)
         {
             InitializeComponent();
             this.connect = frm;
+            this.caMana = frm2;
         }
 
         public string Privatekey
         {
             get
             {
-                string key = Lib.ReadTextFile_CSymm4("publicKey.txt");
+                string key = Lib.ReadTextFile_CSymm4("publicKey.xml");
                 privatekey = Lib.Encrypt(privatekey, key);
                 return privatekey;
             }
             set
             {
                 privatekey = value;
+            }
+        }
+
+        public string Publickey {
+            get
+            {
+                return publickey;
+            }
+            set
+            {
+                byte[] data = Encoding.UTF8.GetBytes(value);
+
+                publickey = BitConverter.ToString(data).Replace("-", ":").ToLower();
+
             }
         }
 
@@ -51,9 +67,15 @@ namespace CA_Client
             organizationalUnitName = this.txtOU.Text;
             organizationName = this.txtON.Text;
             countryName = this.txtC.Text;
-            Lib.generateKey(ref publickey, ref privatekey);
+            string publickey1 = "";
+            string privatekey1 = "";
+            Lib.generateKey(ref publickey1, ref privatekey1);
+            this.Publickey = publickey1;
+            this.Privatekey = privatekey1;
             StringBuilder builder = new StringBuilder();
             builder.Append("capmoi#");
+            builder.Append(connect.UserID);
+            builder.Append("*");
             builder.Append(emailAddress);
             builder.Append("*");
             builder.Append(commonName);
@@ -66,11 +88,47 @@ namespace CA_Client
             builder.Append("*");
             builder.Append(countryName);
             builder.Append("*");
-            builder.Append(publickey);
+            builder.Append(this.Publickey);
             builder.Append("*");
-            connect.Bw.Write(this.Privatekey);
+            builder.Append(this.Privatekey);
+            connect.Bw.Write(builder.ToString());
             connect.Bw.Flush();
+            string str = connect.Br.ReadString();
+            if (str.IndexOf('#')>0)
+            {
+                
+            }
+            else if( str=="ok")
+            {
+                bool bl1 = false;
+                do
+                {
+                    MessageBox.Show("Cấp CA thành công. Hãy chọn nơi lưu private key của bạn");
+                    string curentDirectory = System.IO.Directory.GetCurrentDirectory();
+                    string filter1 = "xml files (*.xml)|*.xml";
+                    string path = SaveFile(curentDirectory, filter1);
+                    bl1 = Lib.WriteTextFile_CSymm4(path, privatekey1);
+                    if (bl1)
+                        MessageBox.Show("Lưu thành công!");
+                    else
+                        MessageBox.Show("Lưu thất bại!");
+                } while (!bl1);
+                this.Close();
 
+            }
+            else
+                MessageBox.Show("Cấp CA thất bại. User đã có CA");
+            caMana.frmCAmanager_Load(sender, e);
+            
+        }
+        private string SaveFile(string initialDirectory, string filter)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = filter;
+            dialog.InitialDirectory = initialDirectory;
+            dialog.Title = "Save file";
+            return (dialog.ShowDialog() == DialogResult.OK)
+               ? dialog.FileName : null;
         }
     }
 }
